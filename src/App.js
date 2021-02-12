@@ -2,9 +2,21 @@ import React, {useState, useEffect} from "react";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 import './App.css';
+import {Navbar, NavbarBrand} from 'reactstrap';
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 
 function App() {
+
+  const [loading, setLoading] = useState(false);
+
+  //run only one time when the page is loading
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 4000)
+  }, []);
   
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]); //an array of objects will be used
@@ -55,14 +67,35 @@ const getLocalTodos = () => {
 };
 
   return (
+    
     <div className="App">
-      <header>
-      <h1>My ToDo List </h1>
-      </header>
+      {
+        loading ?
+        
+        <ClimbingBoxLoader
+          size = {30}
+          color={"#9013FE"}
+          loading={loading}
+        />
+        :
+        <div>
+      
+      <Navbar className="nav" >
+        
+        <h1>Website todo</h1>
+      
+    </Navbar>
+     
+      
+      
+      <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos}/>
       <Form inputText={inputText} todos={todos}
        setTodos={setTodos} setInputText={setInputText}
         setStatus={setStatus} />
-      <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos}/>
+      </div>
+      }
+      
+      
     </div>
   );
 }

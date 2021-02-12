@@ -3,9 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+.App{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.nav{
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  
+  background-color: #8A2BE2;
+}
+
 body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  color: white;
+  background-image: linear-gradient(120deg, #E6E6FA 0%, #E6E6FA 100%);
+  color: #E6E6FA;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
@@ -28,19 +45,20 @@ form button {
   background: white;
 }
 form button {
-  color: #ff6f47;
+  color: #8A2BE2;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 form button:hover {
-  background: #ff6f47;
+  background: #E6E6FA;
   color: white;
 }
 .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .todo-list {
@@ -58,6 +76,12 @@ form button:hover {
   align-items: center;
   transition: all 1s ease;
 }
+
+.todo-input{
+  background-color: #9370DB;
+}
+
+
 .filter-todo {
   padding: 1rem;
 }
@@ -67,7 +91,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  background: #DDA0DD;
   color: white;
   border: none;
   padding: 1rem;
@@ -75,7 +99,8 @@ form button:hover {
   font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(11, 212, 162);
+  background: #DDA0DD;
+  color: #E0FFFF
 }
 .todo-item {
   padding: 0rem 0.5rem;
@@ -106,6 +131,7 @@ select {
   box-shadow: none;
   border: 0 !important;
   background-image: none;
+  color: #9932CC;
 }
 
 /* Custom Select */
@@ -113,9 +139,10 @@ select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
+  color: #E6E6FA;
 }
 select {
-  color: #ff6f47;
+  color: #9370DB;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
@@ -127,13 +154,7 @@ select {
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff6f47;
+  background: #9932CC;
   cursor: pointer;
   pointer-events: none;
 }
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
-}
-*/
