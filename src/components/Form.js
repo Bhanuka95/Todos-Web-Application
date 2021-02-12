@@ -24,19 +24,19 @@ const Form = ({inputText, todos, setTodos, setInputText, setStatus}) => {
 
     return(
         <form>
-      <input onClick={inputTextHandler} type="text" className="todo-input" />
-      <button onClick={submitTodoHandler} classNameName="todo-button" type="submit">
-        <i className="fas fa-plus-square"></i>
-      </button>
-      <div className="select">
-        <select onChange={statusHandler} name="todos" className="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">To be Completed</option>
-        </select>
-      </div>
+        <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
+        <button onClick={submitTodoHandler} classNameName="todo-button" type="submit">
+          <i className="fas fa-plus-square"></i>
+        </button>
+        <div className="select">
+          <select onChange={statusHandler} name="todos" className="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">To be Completed</option>
+          </select>
+        </div>
     </form>
     );
-}
+};
 
 export default Form;

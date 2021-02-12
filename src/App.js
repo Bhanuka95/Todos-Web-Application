@@ -80,14 +80,10 @@ const getLocalTodos = () => {
         :
         <div>
       
-      <Navbar className="nav" >
-        
+      <Navbar className="nav" > 
         <h1>Website todo</h1>
-      
-    </Navbar>
-     
-      
-      
+    </Navbar>  
+    
       <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos}/>
       <Form inputText={inputText} todos={todos}
        setTodos={setTodos} setInputText={setInputText}
