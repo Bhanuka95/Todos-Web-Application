@@ -79,6 +79,7 @@ form button:hover {
 
 .todo-input{
   background-color: #9370DB;
+  font-style: italic;
 }
 
 

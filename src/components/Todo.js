@@ -1,4 +1,5 @@
 import React from 'react';
+import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 
 const Todo = ({text, todo, todos, setTodos}) => {
 
@@ -20,7 +21,9 @@ const Todo = ({text, todo, todos, setTodos}) => {
     };
 
     return(
-        <div className="todo">
+        <Card>
+            <CardBody>
+            <div className="todo">
             <button onClick={completeHandler} className="complete-btn">
                 <i className="far fa-circle"></i>
             </button>
@@ -30,6 +33,10 @@ const Todo = ({text, todo, todos, setTodos}) => {
             <i className="fas fa-trash"></i>
             </button>
         </div>
+            </CardBody>
+        
+        </Card>
+        
     );
 };
 
